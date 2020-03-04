@@ -10,6 +10,10 @@ somaQuadrados n = sum (map (^2) [1..n])
 fact :: Int -> Int
 fact n = product [1..n]
 
+-- Função que retorna a lista de divisores de n
+divisores :: Int -> [Int]
+divisores n = filter ((==0).rem n) [1..n]
+
 -- Função que retorna o vencedor de um jogo de Zerinho ou Um
 zeroUm :: Int -> Int -> Int -> Char
 zeroUm a b c | a == b && b == c = '*'
